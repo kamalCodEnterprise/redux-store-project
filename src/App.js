@@ -8,6 +8,8 @@ import Navbar from './component/Navebar';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import Productdetail from './pages/Productdetail';
+import Check from './pages/Check';
+
 
 
 function App() {
@@ -21,6 +23,9 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
         <Route path='/productdetail' element={<Productdetail/>}></Route>
+        <Route path='/check' element={<Check/>}></Route>
+
+     
   
 
       

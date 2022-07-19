@@ -21,10 +21,13 @@ const Navbar = () => {
                 <Link className="navLink" to="/cart">
                     Cart
                 </Link>
+                <Link className="navLink" to="/check">
+                    check page
+                </Link>
                
                
                 <Link className="navLink" to="/cart">
-                <span className="cartCount">Cart items: ({item.length})</span>
+                <span className="cartCount">Cart items: ({  item.reduce((itm,length)=> length.len===1 ? itm-=1: length.len>1 ? itm++ : itm,item.length)})</span>
                 </Link>
             </div>
         </div>

@@ -16,7 +16,7 @@ const detailSlice = createSlice({
             if(state.length>1){
                 state.splice(action.payload)
                 state.push(action.payload)
-          
+             
           
           }
 
@@ -24,5 +24,5 @@ const detailSlice = createSlice({
         
     }
 })
-export const {detailp} = detailSlice.actions
+export const {detailp,add,incre,decrem} = detailSlice.actions
 export default detailSlice.reducer

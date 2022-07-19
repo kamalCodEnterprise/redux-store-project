@@ -8,6 +8,11 @@ body {
   padding: 20px;
   background: whitesmoke;
 }
+.qtyblock{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;}
 .cardinfo {
   min-height: 84px;
 }
