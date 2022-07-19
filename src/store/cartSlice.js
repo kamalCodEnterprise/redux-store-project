@@ -15,8 +15,28 @@ const cartSlice = createSlice({
         
         add(state, action){
             
-            //state.push(action.payload)
+
+        //state.push(action.payload)
    
+
+          const index1 = state.findIndex(item => item.id === action.payload.id);
+
+           if (index1 === -1) {
+             state.push({
+               ...action.payload,
+               quantity: 1
+             });
+             const updateCart = [...state];
+             console.log("carffft" + updateCart);
+           } else {
+            state[index1].quantity += 1;
+             const updateCart = [...state];
+             console.log("updtaed cart" + updateCart);
+             
+           }
+           
+            
+
            
            const index = state.findIndex(item => item.id === action.payload.id);
            console.log(index)
