@@ -19,21 +19,21 @@ const cartSlice = createSlice({
         //state.push(action.payload)
    
 
-          const index1 = state.findIndex(item => item.id === action.payload.id);
+          // const index1 = state.findIndex(item => item.id === action.payload.id);
 
-           if (index1 === -1) {
-             state.push({
-               ...action.payload,
-               quantity: 1
-             });
-             const updateCart = [...state];
-             console.log("carffft" + updateCart);
-           } else {
-            state[index1].quantity += 1;
-             const updateCart = [...state];
-             console.log("updtaed cart" + updateCart);
+          //  if (index1 === -1) {
+          //    state.push({
+          //      ...action.payload,
+          //      quantity: 1
+          //    });
+          //    const updateCart = [...state];
+          //    console.log("carffft" + updateCart);
+          //  } else {
+          //   state[index1].quantity += 1;
+          //    const updateCart = [...state];
+          //    console.log("updtaed cart" + updateCart);
              
-           }
+          //  }
            
             
 
@@ -44,7 +44,7 @@ const cartSlice = createSlice({
              state.push({
                ...action.payload,
                quantity: 1,
-               len : 1
+               len : 2
                
              });
              
@@ -64,7 +64,7 @@ const cartSlice = createSlice({
              
            } 
            else {
-            state[index].quantity =1;
+            //state[index].quantity =1;
             //alert( state[index].title +' ' + "already added in cart" + state.length)
             toast.warn('Already added to the cart. Please check your cart.', {
               position: "top-center",
